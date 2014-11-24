@@ -1,0 +1,16 @@
+{
+    "contents" : "\nlibrary(shiny)\nlibrary(shinysky)\n\nshinyUI(fluidPage(theme=\"bootstrap.css\",\n  title=\"Visualizing inter-state migration in Australia\",\n  h3(\"Visualizing inter-state migration in Australia\"),\n#   jscolorInput(\"colorid\"),\n  #can't send default colour :(\n#   uiOutput('myPanel'),\n  fluidRow(\n    column(4, p(\"Select line colour at source: \"),\n           jscolorInput(\"couleur_source\")),\n    column(4, p(\"Select line colour at destination: \"),\n           jscolorInput(\"couleur_destination\")),\n    column(4, p(\"Select line colour at mid: \"),\n           jscolorInput(\"couleur_mid\"))),\n  fluidRow(\n    column(4, p(\"Select ocean colour: \"),\n           jscolorInput(\"couleur_ocean\")),\n    column(4, p(\"Select boundary outline colour: \"),\n           jscolorInput(\"couleur_boundary\")),\n    column(4, p(\"Select landmass colour: \"),\n           jscolorInput(\"couleur_landmass\"))),\n  fluidRow(\n    column(12,\n           actionButton(\"goButton\", \"Yo, click here to draw map\",\n                        styleclass=\"success\", block=TRUE)\n           )),\n  fluidRow(\n    column(12,\n           p(\"Yo, the map will appear below\"),\n            plotOutput(\"mapPlot\")\n           ))\n))\n",
+    "created" : 1415451696893.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "231491306",
+    "id" : "24EE98F0",
+    "lastKnownWriteTime" : 1416831364,
+    "path" : "C:/Users/Lenovo/github/shinymap/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
